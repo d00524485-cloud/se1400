@@ -1,0 +1,183 @@
+:root {
+    --bg: #15130F;
+    --ink: #F2ECDF;
+    --muted: #B9AD98;
+    --accent: #B08A4E;
+    --rule: #3A362E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+header {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 28px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+}
+
+header h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
+    margin: 0 0 8px;
+}
+
+header .tagline {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 1rem;
+    margin: 0;
+}
+
+nav {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.95rem;
+}
+
+nav a {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--accent);
+}
+
+main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+}
+
+main h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0 0 12px;
+}
+
+.lede {
+    color: var(--muted);
+    margin: 0 0 32px;
+}
+
+main h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 40px 0 2px;
+    border-top: 1px solid var(--rule);
+    padding-top: 32px;
+}
+
+main h3:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.byline {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin: 0 0 14px;
+}
+
+main h4 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 1.05rem;
+    margin: 36px 0 8px;
+    border-top: 1px solid var(--rule);
+    padding-top: 28px;
+}
+
+main h4:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+main p {
+    margin: 0 0 8px;
+}
+
+main ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 4px;
+}
+
+main li {
+    position: relative;
+    padding-left: 1.4em;
+    margin-bottom: 10px;
+}
+
+main li::before {
+    content: "\2014";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 28px 24px 56px;
+    text-align: center;
+    border-top: 1px solid var(--rule);
+}
+
+footer h6 {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 48px 20px 24px;
+    }
+
+    main {
+        padding: 36px 20px 48px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 4px 6px;
+    }
+}
