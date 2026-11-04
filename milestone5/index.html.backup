@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Provenance | Fashion Authentication & Archive</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="grid">
+
+    <!-- HEADER -->
+    <header class="logo">
+      Provenance.
+    </header>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#deep-dives">Deep Dives</a>
+      <a href="#labels">Labels</a>
+      <a href="#price-watch">Price Watch</a>
+      <a href="#authentication">Authentication</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-text" id="home">
+      <h1>Know the Story Behind the Style.</h1>
+
+      <p>
+        Explore the world of designer fashion, discover the history
+        behind iconic labels, and learn how to recognize authentic
+        pieces.
+      </p>
+
+      <a href="#deep-dives" class="btn">Explore the Archive</a>
+    </section>
+
+    <figure class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000"
+        alt="Fashion runway editorial photograph">
+    </figure>
+
+    <!-- FEATURED DEEP DIVES -->
+    <section class="dd-head" id="deep-dives">
+      <h2>Featured Deep Dives</h2>
+      <a href="#labels">See all →</a>
+    </section>
+
+    <article class="card1">
+      <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=700" alt="Designer fashion clothing">
+
+      <h3>The Art of Archive Fashion</h3>
+
+      <p>
+        Discover the history and influence behind iconic
+        designer collections.
+      </p>
+    </article>
+
+    <article class="card2">
+      <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=700" alt="Fashion editorial outfit">
+
+      <h3>Streetwear Through the Years</h3>
+
+      <p>
+        Explore how streetwear evolved into a global fashion movement.
+      </p>
+    </article>
+
+    <article class="card3">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700" alt="Fashion clothing collection">
+
+      <h3>Understanding Designer Labels</h3>
+
+      <p>
+        Learn about the designers and brands that shaped modern fashion.
+      </p>
+    </article>
+
+    <!-- LABELS WE COVER -->
+    <section class="labels-head" id="labels">
+      <h2>Labels We Cover</h2>
+      <a href="#labels">Explore all →</a>
+    </section>
+
+    <section class="labels">
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500" alt="Fashion editorial">
+        <figcaption>Balenciaga</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=500" alt="Designer fashion">
+        <figcaption>Gucci</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500" alt="Fashion runway">
+        <figcaption>Yohji Yamamoto</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500" alt="Fashion outfit">
+        <figcaption>Undercover</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500" alt="Fashion collection">
+        <figcaption>Raf Simons</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=500" alt="Designer clothing">
+        <figcaption>Junya Watanabe</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500" alt="Fashion editorial">
+        <figcaption>If Six Was Nine</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500" alt="Fashion styling">
+        <figcaption>Chrome Hearts</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=500" alt="Designer outfit">
+        <figcaption>Yves Saint Laurent</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500" alt="Streetwear fashion">
+        <figcaption>Supreme</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500" alt="Runway fashion">
+        <figcaption>Mastermind Japan</figcaption>
+      </figure>
+
+      <figure class="tile">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500" alt="Designer fashion">
+        <figcaption>Maison Margiela</figcaption>
+      </figure>
+
+    </section>
+
+    <!-- PRICE WATCH -->
+    <section class="price" id="price-watch">
+      <h2>Price Watch</h2>
+
+      <p>Keep an eye on the market and designer resale trends.</p>
+
+      <div class="price-row">
+        <span>Designer Archive</span>
+        <strong>Explore</strong>
+      </div>
+
+      <div class="price-row">
+        <span>Streetwear</span>
+        <strong>Explore</strong>
+      </div>
+
+      <div class="price-row">
+        <span>Luxury Fashion</span>
+        <strong>Explore</strong>
+      </div>
+    </section>
+
+    <!-- AUTHENTICATION -->
+    <aside class="auth" id="authentication">
+      <h2>How to Spot a Fake</h2>
+
+      <p>Learn the details that separate authentic pieces from replicas.</p>
+
+      <ul>
+        <li>01 — Check stitching and construction</li>
+        <li>02 — Examine labels and tags</li>
+        <li>03 — Inspect materials and hardware</li>
+        <li>04 — Verify product details</li>
+      </ul>
+    </aside>
+
+    <!-- NEWSLETTER -->
+    <section class="news-text" id="newsletter">
+      <h2>Stay in the Know.</h2>
+
+      <p>
+        Get the latest fashion discoveries, archive stories,
+        and authentication guides delivered to your inbox.
+      </p>
+    </section>
+
+    <form class="news-form">
+      <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="about">
+      <span>Provenance.</span>
+      <span>Fashion. History. Authenticity.</span>
+      <span>© 2026 Provenance</span>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
