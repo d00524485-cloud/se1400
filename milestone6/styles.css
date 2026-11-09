@@ -1,0 +1,631 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #ffffff;
+    --surface: #ffffff;
+    --text: #8C0F22;
+    --muted: #A33A48;
+    --accent: #C8102E;
+    --border: #E9C9CE;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: "Archivo", system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.dd-head,
+.labels-head {
+    font-family: "Newsreader", Georgia, serif;
+}
+
+/* RESPONSIVE IMAGES: never wider than their container, height scales with width */
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+picture {
+    display: block;
+}
+
+a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* MAIN GRID
+   Column 1 and column 8 are the flexible left/right columns.
+   Columns 2-7 make up the center column (6 x 175px + 5 gaps = 1110px). */
+.grid {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+    gap: 12px;
+    padding: 12px 0;
+}
+
+.grid>* {
+    min-width: 0;
+    margin: 0;
+}
+
+/* HEADER */
+.logo {
+    grid-column: 2 / 4;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Menu uses flexbox */
+.nav {
+    grid-column: 4 / 8;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.nav a {
+    padding-bottom: 4px;
+}
+
+.nav a.active {
+    border-bottom: 2px solid var(--accent);
+}
+
+/* HERO */
+.hero-text {
+    grid-column: 2 / 5;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.hero-text h1 {
+    margin: 0 0 20px;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    margin: 0 0 24px;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.hero-photo {
+    grid-column: 5 / 8;
+    grid-row: 2;
+    position: relative;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+}
+
+.hero-photo picture,
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--text);
+    color: #ffffff;
+}
+
+/* SECTION HEADINGS */
+.dd-head {
+    grid-column: 2 / 8;
+    grid-row: 3;
+}
+
+.labels-head {
+    grid-column: 2 / 8;
+    grid-row: 5;
+}
+
+.dd-head,
+.labels-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 28px;
+    font-size: 24px;
+}
+
+.dd-head h2,
+.labels-head h2 {
+    margin: 0;
+}
+
+.dd-head a,
+.labels-head a {
+    color: var(--accent);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* DEEP DIVE CARDS */
+.card1 {
+    grid-column: 2 / 4;
+    grid-row: 4;
+}
+
+.card2 {
+    grid-column: 4 / 6;
+    grid-row: 4;
+}
+
+.card3 {
+    grid-column: 6 / 8;
+    grid-row: 4;
+}
+
+.card1 img,
+.card2 img,
+.card3 img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.card1 h3,
+.card2 h3,
+.card3 h3 {
+    margin: 12px 0 6px;
+    font-size: 22px;
+    line-height: 1.25;
+}
+
+.card1 p,
+.card2 p,
+.card3 p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* LABELS IMAGE GALLERY (flexbox)
+   flex-basis sets how wide each tile is: 4 tiles per row on desktop. */
+.labels {
+    grid-column: 2 / 8;
+    grid-row: 6;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.labels .tile {
+    flex: 0 0 calc((100% - 36px) / 4);
+    margin: 0;
+    min-width: 0;
+    text-align: center;
+}
+
+.labels .tile img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.labels .tile figcaption {
+    padding: 10px 4px;
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 20px;
+}
+
+/* PRICE WATCH */
+.price {
+    grid-column: 2 / 5;
+    grid-row: 7;
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.price h2,
+.auth h2 {
+    margin-top: 0;
+    font-family: "Newsreader", Georgia, serif;
+}
+
+.price .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+}
+
+.price .item-name {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.price .last-sold {
+    color: #888;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.price .up {
+    color: #1F7A4D;
+}
+
+.price .down {
+    color: #C2570C;
+}
+
+/* AUTHENTICATION */
+.auth {
+    grid-column: 5 / 8;
+    grid-row: 7;
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.auth ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.auth li {
+    position: relative;
+    padding: 12px 0 12px 28px;
+    border-top: 1px solid var(--border);
+}
+
+.auth li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* NEWSLETTER
+   Responsive background image: background-size: cover makes it fill the box at any width.
+   A dark red overlay keeps the white text readable. */
+.newsletter {
+    grid-column: 2 / 8;
+    grid-row: 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 40px 30px;
+    color: #ffffff;
+    background-color: var(--text);
+    background-image:
+        linear-gradient(rgba(140, 15, 34, 0.88), rgba(140, 15, 34, 0.88)),
+        url("images/photo-02.jpg");
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+}
+
+.news-text {
+    flex: 1;
+}
+
+.news-text h2 {
+    margin: 0 0 8px;
+}
+
+.news-text p {
+    margin: 0;
+}
+
+.news-form {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.news-form input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid var(--border);
+    font: inherit;
+}
+
+/* White button so it stands out on the red background */
+.newsletter .btn {
+    background: #ffffff;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.newsletter .btn:hover {
+    background: var(--border);
+    color: var(--text);
+}
+
+/* FOOTER */
+.footer {
+    grid-column: 2 / 8;
+    grid-row: 9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 0;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+
+/* Footer menu uses flexbox */
+.footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: inherit;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   MEDIA QUERY 1: viewports less than 992px (tablets / small laptops)
+   The center column is set to 768px wide:
+   6 columns x 118px + 5 gaps x 12px = 768px
+   ========================================================= */
+@media (max-width: 991px) {
+
+    .grid {
+        grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 118px)) minmax(0px, 1fr);
+    }
+
+    /* Logo on its own row, menu centered underneath */
+    .logo {
+        grid-column: 2 / 8;
+        grid-row: 1;
+        justify-content: center;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .nav {
+        grid-column: 2 / 8;
+        grid-row: 2;
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    /* Move every section down one row to make room for the menu */
+    .hero-text,
+    .hero-photo {
+        grid-row: 3;
+    }
+
+    .dd-head {
+        grid-row: 4;
+    }
+
+    .card1,
+    .card2,
+    .card3 {
+        grid-row: 5;
+    }
+
+    .labels-head {
+        grid-row: 6;
+    }
+
+    .labels {
+        grid-row: 7;
+    }
+
+    .price,
+    .auth {
+        grid-row: 8;
+    }
+
+    .newsletter {
+        grid-row: 9;
+    }
+
+    .footer {
+        grid-row: 10;
+    }
+
+    .hero-text {
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .card1 h3,
+    .card2 h3,
+    .card3 h3 {
+        font-size: 19px;
+    }
+
+    /* Gallery: 3 tiles per row */
+    .labels .tile {
+        flex-basis: calc((100% - 24px) / 3);
+    }
+
+    .labels .tile figcaption {
+        font-size: 18px;
+    }
+
+    /* Newsletter: text on top, form underneath */
+    .newsletter {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   MEDIA QUERY 2: viewports 768px and below (phones)
+   The left and right columns are turned off and the
+   center column is 100% wide. Everything stacks in one column.
+   ========================================================= */
+@media (max-width: 768px) {
+
+    .grid {
+        grid-template-columns: 100%;
+        gap: 16px;
+        padding: 12px 16px;
+    }
+
+    /* Every grid child goes in the single 100% column, in HTML order */
+    .grid>* {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .logo {
+        font-size: 20px;
+        padding: 8px 0 0;
+    }
+
+    /* Menu wraps into centered rows */
+    .nav {
+        padding: 8px 0 12px;
+        gap: 8px 16px;
+        font-size: 14px;
+    }
+
+    .hero-text {
+        padding: 8px 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    /* Picture tag swaps in a wide crop, so the photo is not super tall on a phone */
+    .hero-photo {
+        aspect-ratio: 5 / 4;
+    }
+
+    .dd-head,
+    .labels-head {
+        gap: 12px;
+        padding: 16px 0 4px;
+    }
+
+    .dd-head h2,
+    .labels-head h2 {
+        font-size: 24px;
+    }
+
+    .dd-head a,
+    .labels-head a {
+        flex-shrink: 0;
+        font-size: 13px;
+    }
+
+    .card1 img,
+    .card2 img,
+    .card3 img {
+        aspect-ratio: 16 / 10;
+    }
+
+    /* Gallery: 2 tiles per row */
+    .labels .tile {
+        flex-basis: calc((100% - 12px) / 2);
+    }
+
+    .labels .tile figcaption {
+        font-size: 16px;
+    }
+
+    .price,
+    .auth {
+        padding: 16px;
+    }
+
+    /* Smaller background image file for phones */
+    .newsletter {
+        padding: 30px 20px;
+        background-image:
+            linear-gradient(rgba(140, 15, 34, 0.88), rgba(140, 15, 34, 0.88)),
+            url("images/responsive/newsletter-small.jpg");
+    }
+
+    /* Email box and button stack on top of each other */
+    .news-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .news-form .btn {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
